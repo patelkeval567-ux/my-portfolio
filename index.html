@@ -4,27 +4,28 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Keval Patel — Portfolio</title>
+    <title>Resume — Keval Patel</title>
     <style>
         :root {
             --accent: #0ea5a4;
             --bg: #f7f7fb;
             --card: #ffffff;
-            --muted: #6b7280
+            --muted: #6b7280;
+            --dark: #0f172a
         }
 
         html,
         body {
-            height: 100%;
             margin: 0;
             font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background: var(--bg);
-            color: #0f172a
+            color: var(--dark)
         }
 
         header {
             background: linear-gradient(90deg, rgba(14, 165, 164, .06), transparent);
-            padding: 18px 24px
+            padding: 18px 24px;
+            border-bottom: 1px solid rgba(14, 165, 164, .1)
         }
 
         .container {
@@ -53,59 +54,132 @@
             font-weight: 600
         }
 
-        .hero {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            padding: 48px;
-            border-radius: 12px;
-            background: linear-gradient(180deg, #fff, #fbfdff);
-            box-shadow: 0 6px 18px rgba(2, 6, 23, .06)
+        nav a:hover {
+            color: var(--accent)
         }
 
-        .hero h1 {
+        main {
+            padding-top: 28px;
+            padding-bottom: 28px
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 2rem;
+            color: var(--dark)
+        }
+
+        .subtitle {
+            color: var(--muted);
+            margin: 0 0 28px;
+            font-size: 16px
+        }
+
+        .resume-section {
+            margin-bottom: 32px
+        }
+
+        .resume-section h2 {
+            font-size: 18px;
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 8px;
+            margin: 0 0 16px;
+            font-weight: 700
+        }
+
+        .resume-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(15, 23, 42, .08)
+        }
+
+        .resume-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0
+        }
+
+        .resume-item h3 {
+            margin: 0 0 4px;
+            font-size: 16px;
+            color: var(--dark)
+        }
+
+        .resume-item .meta {
+            color: var(--muted);
+            font-size: 14px;
             margin: 0;
-            font-size: 2rem
+            font-weight: 600
         }
 
-        section {
-            margin-top: 28px
+        .resume-item p {
+            margin: 8px 0 0;
+            color: var(--muted);
+            line-height: 1.5
         }
 
-        .card {
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 8px;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 16px 12px 0 0;
+            transition: opacity 0.2s
+        }
+
+        .btn:hover {
+            opacity: 0.9
+        }
+
+        .btn-secondary {
+            background: #e5e7eb;
+            color: var(--dark)
+        }
+
+        .pdf-placeholder {
             background: var(--card);
-            padding: 18px;
+            padding: 24px;
             border-radius: 10px;
+            text-align: center;
+            margin-bottom: 24px;
             box-shadow: 0 6px 18px rgba(2, 6, 23, .04)
         }
 
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 12px;
-            margin-top: 12px
-        }
-
-        .skill {
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid rgba(15, 23, 42, .04);
-            background: linear-gradient(180deg, #fff, #fcfeff);
-            font-weight: 600
+        .pdf-placeholder p {
+            color: var(--muted);
+            margin: 0 0 16px;
+            line-height: 1.6
         }
 
         footer {
             margin-top: 36px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(14, 165, 164, .1);
             color: var(--muted);
             font-size: 13px;
             text-align: center
         }
 
-        @media(min-width:760px) {
-            .hero {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between
+        @media (max-width: 760px) {
+            .container {
+                padding: 16px
+            }
+
+            h1 {
+                font-size: 1.5rem
+            }
+
+            .nav {
+                flex-wrap: wrap
+            }
+
+            nav a {
+                margin-left: 8px;
+                font-size: 14px
             }
         }
     </style>
@@ -114,74 +188,103 @@
 <body>
     <header>
         <div class="container nav">
-            <div class="brand">Keval Patel</div>
+            <a href="./index.html" class="brand">← Keval Patel</a>
             <nav aria-label="Main navigation">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
-                <a href="./resume.html">Resume</a>
-                <a href="./assets/Keval_Patel_Resume_Data_Analyst.pdf" download
-                    style="background:var(--accent);color:#fff;padding:6px 10px;border-radius:6px;text-decoration:none;margin-left:8px;font-weight:700">📥
-                    Download</a>
+                <a href="./index.html">Home</a>
+                <a href="./index.html#about">About</a>
+                <a href="./index.html#skills">Skills</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <section id="home" class="hero card">
-            <div>
-                <h1>Welcome — I build things with data</h1>
-                <p style="color:var(--muted);margin:8px 0 0">Hello! I'm Keval. I solve real problems using data,
-                    modeling, and visual storytelling.</p>
+        <h1>Resume</h1>
+        <p class="subtitle">Data Science Professional | Dalton, GA</p>
+
+        <div class="pdf-placeholder">
+            <p>📄 <strong>Keval Patel — Resume (PDF)</strong></p>
+            <p style="margin: 0 0 12px; font-size: 14px">Below is your resume embedded for quick viewing. Use the
+                download button to save a copy.</p>
+            <div
+                style="width:100%;height:70vh;margin:12px 0;border:1px solid rgba(15,23,42,.06);border-radius:8px;overflow:hidden">
+                <iframe src="./assets/Keval_Patel_Resume_Data_Analyst.pdf" width="100%" height="100%"
+                    style="border:0">Your browser does not support embedded PDFs. You can <a
+                        href="./assets/Keval_Patel_Resume_Data_Analyst.pdf">download the PDF</a> instead.</iframe>
             </div>
-            <div style="text-align:right">
-                <p style="margin:0;color:var(--muted)">Location: Dalton, GA · Open to opportunities</p mkdir -p
-                    /Users/bhumipatel/Desktop/my-portfolio/assets cp ~/Downloads/Keval_Patel_Resume-2.docx
-                    /Users/bhumipatel/Desktop/my-portfolio/assets />
+            <a href="./assets/Keval_Patel_Resume_Data_Analyst.pdf" class="btn btn-secondary"
+                style="margin-top:0">Download Resume (PDF)</a>
+            <p style="margin-top:12px;color:var(--muted);font-size:13px">If the PDF doesn't load, make sure the file
+                <code>Keval_Patel_Resume_Data_Analyst.pdf</code> exists in the <code>/assets</code> folder.
+            </p>
+        </div>
+
+        <section class="resume-section">
+            <h2>Professional Summary</h2>
+            <p style="color: var(--muted); line-height: 1.6">Data science professional with expertise in converting
+                complex datasets into actionable insights. Strong background in statistical modeling, machine learning,
+                and data visualization. Proven ability to communicate findings to both technical and non-technical
+                stakeholders.</p>
+        </section>
+
+        <section class="resume-section">
+            <h2>Skills</h2>
+            <div class="resume-item">
+                <h3>Data Science & Analytics</h3>
+                <p>Python (pandas, NumPy, scikit-learn), Statistical Analysis, A/B Testing, Exploratory Data Analysis,
+                    Feature Engineering</p>
+            </div>
+            <div class="resume-item">
+                <h3>Machine Learning</h3>
+                <p>Regression, Classification, Clustering, TensorFlow, PyTorch, Model Evaluation & Optimization</p>
+            </div>
+            <div class="resume-item">
+                <h3>Data Engineering</h3>
+                <p>SQL, ETL Pipelines, Apache Spark, Dask, Data Warehousing, Docker</p>
+            </div>
+            <div class="resume-item">
+                <h3>Visualization & Communication</h3>
+                <p>Matplotlib, Seaborn, Tableau, Jupyter Notebooks, Report Writing, Stakeholder Communication</p>
             </div>
         </section>
 
-        <section id="about">
-            <h2 style="margin-bottom:8px">About Me</h2>
-            <div class="card">
-                <p style="margin:0;color:var(--muted)">I'm a data practitioner focused on converting messy data into
-                    actionable insights. I enjoy exploratory analysis, building reliable ML pipelines, and making
-                    results clear to stakeholders. I like working end-to-end: data collection, cleaning, modeling, and
-                    visualization.</p>
+        <section class="resume-section">
+            <h2>Experience</h2>
+            <div class="resume-item">
+                <h3>Data Scientist / Analytics Professional</h3>
+                <p class="meta">Your Company Name · Location · Year – Present</p>
+                <p>• Developed and deployed machine learning models to improve business processes</p>
+                <p>• Conducted exploratory data analysis on large-scale datasets to identify patterns and insights</p>
+                <p>• Collaborated with cross-functional teams to translate business requirements into data solutions</p>
+            </div>
+            <div class="resume-item">
+                <h3>Junior Data Analyst</h3>
+                <p class="meta">Previous Company · Location · Year – Year</p>
+                <p>• Cleaned and processed raw data using Python and SQL</p>
+                <p>• Created visualizations and dashboards to support business decisions</p>
+                <p>• Assisted in feature engineering for predictive modeling projects</p>
             </div>
         </section>
 
-        <section id="skills">
-            <h2 style="margin-bottom:8px">Skills</h2>
-            <div class="card">
-                <p style="margin:0 0 12px;color:var(--muted)">Core data science skills and tools I use:</p>
-                <div class="skills">
-                    <div class="skill">Python</div>
-                    <div class="skill">pandas / NumPy</div>
-                    <div class="skill">scikit-learn</div>
-                    <div class="skill">TensorFlow / PyTorch</div>
-                    <div class="skill">SQL</div>
-                    <div class="skill">Statistics & A/B testing</div>
-                    <div class="skill">Data visualization (Matplotlib, Seaborn)</div>
-                    <div class="skill">Model deployment (Docker, REST APIs)</div>
-                    <div class="skill">Big data: Spark / Dask</div>
-                    <div class="skill">Feature engineering & ETL</div>
-                </div>
+        <section class="resume-section">
+            <h2>Education</h2>
+            <div class="resume-item">
+                <h3>Degree Name</h3>
+                <p class="meta">University Name · Graduation Year</p>
+                <p>Relevant coursework: Machine Learning, Statistics, Data Mining, Advanced Python</p>
             </div>
         </section>
 
-        <section id="contact" style="margin-top:22px">
-            <div class="card">
-                <strong>Contact</strong>
-                <p style="margin:6px 0 0;color:var(--muted)">Email: <a
-                        href="mailto:keval_patel00@yahoo.com">keval_patel00@yahoo.com</a></p>
-                <p style="margin:8px 0 0;color:var(--muted)"><a href="./resume.html">View My Resume</a></p>
+        <section class="resume-section">
+            <h2>Projects & Certifications</h2>
+            <div class="resume-item">
+                <h3>Notable Project or Certification</h3>
+                <p class="meta">Platform or Organization · Year</p>
+                <p>Brief description of the project, tools used, and key outcomes or skills demonstrated.</p>
             </div>
         </section>
 
         <footer>
-            © <span id="year"></span> Keval Patel — Built with simple HTML & CSS
+            © <span id="year"></span> Keval Patel — Data Science Portfolio
         </footer>
     </main>
 
